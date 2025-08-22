@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 900px;
+  border: 1px solid green;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  & .header {
+    background-color: green;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+
+    & .figure {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+    }
+
+    & .title {
+      color: yellow;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+
+  & .main {
+    display: flex;
+
+    & .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 20px 10px;
+      height: 500px;
+      width: 20%;
+      background-color: rgb(211, 253, 147);
+      border-radius: 0 0 0 10px;
+
+      & .option {
+        color: green;
+        font-weight: bold;
+        font-size: 25px;
+        text-decoration: none;
+      }
+
+      & .option:visited {
+        color: green;
+      }
+    }
+
+    & .content {
+      width: 80%;
+      background-color: rgb(253, 253, 178);
+      border-radius: 0 0 10px 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & .title {
+        color: green;
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      & .separator {
+        width: 75%;
+        height: 1px;
+        background-color: gray;
+      }
+    }
+  }
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  & label {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    width: 30%;
+  }
+
+  & input {
+    background-color: white;
+    padding: 5px;
+    width: 35%;
+  }
+
+  & textarea {
+    background-color: white;
+    width: 45%;
+    border: 1px solid black;
+  }
+}

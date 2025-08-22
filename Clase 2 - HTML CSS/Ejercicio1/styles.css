@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+body {
+  background-color: rgb(78, 78, 78);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  & .header {
+    width: 100%;
+    background-color: rgb(119, 119, 119);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    & .links {
+      display: flex;
+      gap: 10px;
+      & .link {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-size: cover;
+      }
+    }
+
+    & .searchbar {
+      display: flex;
+
+      & input {
+        border-radius: 10px 0 0 10px;
+        padding: 10px;
+        border: none;
+        outline: none;
+      }
+
+      & .button {
+        border-radius: 0 10px 10px 0;
+        background-color: rgb(187, 187, 187);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        outline: none;
+      }
+    }
+  }
+
+  & .header-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(182, 182, 182);
+    padding: 10px;
+    align-items: center;
+
+    & .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    & .title {
+      font-size: 25px;
+      font-weight: bold;
+      color: rgb(119, 119, 119);
+    }
+  }
+
+  & .navbar {
+    display: flex;
+    padding: 5px 30px;
+    background-color: rgb(119, 119, 119);
+    gap: 5px;
+    & .option {
+      padding: 20px 15px;
+      background-color: rgb(255, 196, 0);
+      font-size: 10px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    & .option:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  & .content {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgb(182, 182, 182);
+
+    & .main {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+
+      & .slider {
+        width: 100%;
+        background-image: url("images/anuncio.webp");
+        height: 360px;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+
+        & .controls {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          & .control {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 196, 0);
+            border: 1px solid white;
+          }
+        }
+
+        & .circles {
+          display: flex;
+          gap: 5px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          & .circle {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+
+    & .ads {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 25%;
+
+      & .button {
+        width: 100%;
+        cursor: pointer;
+
+        & img {
+          width: 100%;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
