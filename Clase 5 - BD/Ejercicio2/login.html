@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      margin: auto;
+      gap: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <form action="autenticar.php" method="post">
+      <label>Login</label>
+      <input type="text" name="nombre" />
+      <label>Contraseña</label>
+      <input type="password" name="password" />
+      <button>Ingresar</button>
+    </form>
+  </body>
+</html>
