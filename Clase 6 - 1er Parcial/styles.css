@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --naranja-claro: #fabf8f;
+  --amarillo: #ffff66;
+  --verde: #92d050;
+  --gris: #d9d9d9;
+  --naranja: #ffc000;
+  --azul: #0070c0;
+  --rojo: #c60000;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.operacion {
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+}
+
+table.tabla-usuarios {
+  & tr th {
+    padding: 5px 10px;
+    background-color: var(--rojo);
+    color: white;
+    & a {
+      color: white;
+    }
+
+    & a:visited {
+      color: white;
+    }
+  }
+
+  & tr td {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+  }
+}
+
+.option {
+  padding: 5px 10px;
+  border: 2px solid var(--rojo);
+  background-color: var(--amarillo);
+  text-align: center;
+  color: black;
+  font-weight: normal;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.option:visited {
+  color: black;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+
+  & .header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--naranja-claro);
+    border-bottom: 1px solid black;
+  }
+
+  & .info {
+    display: flex;
+    border-bottom: 1px solid black;
+
+    & .carrera {
+      width: 50%;
+      border-right: 1px solid black;
+      padding: 10px;
+    }
+
+    & .carrera:last-child {
+      border-right: none;
+    }
+  }
+
+  .navbar {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: var(--amarillo);
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+  }
+
+  & .content {
+    display: flex;
+    border-bottom: 1px solid black;
+    min-height: 200px;
+
+    & .menu {
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    & .main {
+      width: 780px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--gris);
+    }
+  }
+
+  & .footer {
+    padding: 5px;
+    display: flex;
+    justify-content: end;
+  }
+}
