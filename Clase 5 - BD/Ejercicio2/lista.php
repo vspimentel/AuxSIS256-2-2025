@@ -41,16 +41,16 @@ $result = $con->query($sql);
                 <th>Acciones</th>
             <?php endif; ?>
         </tr>
-        <?php while ($row = mysqli_fetch_array($result)): ?>
+        <?php while ($producto = mysqli_fetch_array($result)): ?>
             <tr>
-                <td><img src="images/<?= $row['imagen']; ?>" height="100"></td>
-                <td><?= $row['nombre']; ?></td>
-                <td><?= $row['precio']; ?>Bs.</td>
+                <td><img src="images/<?= $producto['imagen']; ?>" height="100"></td>
+                <td><?= $producto['nombre']; ?></td>
+                <td><?= $producto['precio']; ?>Bs.</td>
                 <?php if ($nivel == 1): ?>
                     <td>
                         <div style="display: flex; gap: 5px">
-                            <a href="f_editar.php?id=<?= $row['id'] ?>">Editar</a>
-                            <a href="eliminar.php?id=<?= $row['id'] ?>">Eliminar</a>
+                            <a href="f_editar.php?id=<?= $producto['id'] ?>">Editar</a>
+                            <a href="eliminar.php?id=<?= $producto['id'] ?>">Eliminar</a>
                         </div>
                     </td>
                 <?php endif; ?>
