@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+
+        td {
+          padding: 5px;
+          text-align: center;
+          width: 100px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="number" id="numero" />
+    <button onclick="mostrarTabla()">Mostrar Tabla</button>
+    <div id="tabla"></div>
+    <select id="columna">
+      <option value="Operador 1">Operador 1</option>
+      <option value="Operación">Operación</option>
+      <option value="Operador 2">Operador 2</option>
+      <option value="Igual">Igual</option>
+      <option value="Resultado">Resultado</option>
+    </select>
+    <input type="color" id="color" />
+    <button onclick="cambiarColor()">Cambiar color</button>
+  </body>
+  <script>
+    function mostrarTabla(columna = null, color = null) {
+      const num = parseInt(numero.value);
+      let html = `<table border="1">`;
+      html += `
+        <tr>
+            <th ${
+              columna === "Operador 1"
+                ? `style="background-color: ${color}"`
+                : ""
+            }>
+                Operador 1
+            </th>
+            <th ${
+              columna === "Operación"
+                ? `style="background-color: ${color}"`
+                : ""
+            }>
+                Operación
+            </th>
+            <th ${
+              columna === "Operador 2"
+                ? `style="background-color: ${color}"`
+                : ""
+            }>
+                Operador 2
+            </th>
+            <th ${
+              columna === "Igual" ? `style="background-color: ${color}"` : ""
+            }>
+                Igual
+            </th>
+            <th ${
+              columna === "Resultado"
+                ? `style="background-color: ${color}"`
+                : ""
+            }>
+                Resultado
+            </th>
+        </tr>`;
+      for (let i = 1; i <= 10; i++) {
+        html += `<tr>
+            <td ${
+              columna === "Operador 1"
+                ? `style="background-color: ${color}"`
+                : ""
+            }>
+                ${num}
+                </td>
+            <td ${
+              columna === "Operación"
+                ? `style="background-color: ${color}"`
+                : ""
+            }>
+                +
+                </td>
+            <td ${
+              columna === "Operador 2"
+                ? `style="background-color: ${color}"`
+                : ""
+            }>
+                ${i}
+                </td>
+            <td ${
+              columna === "Igual" ? `style="background-color: ${color}"` : ""
+            }>
+                =
+                </td>
+            <td ${
+              columna === "Resultado"
+                ? `style="background-color: ${color}"`
+                : ""
+            }>
+                ${num + i}
+            </td>
+        </tr>`;
+      }
+      html += `</table>`;
+      tabla.innerHTML = html;
+    }
+
+    function cambiarColor() {
+      const columnaV = columna.value;
+      const colorV = color.value;
+      mostrarTabla(columnaV, colorV);
+    }
+  </script>
+</html>

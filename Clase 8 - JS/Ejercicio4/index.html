@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="producto" />
+      <input type="color" id="color" />
+      <button onclick="agregar()" id="btnAgregar">Agregar</button>
+    </div>
+    <ul id="lista"></ul>
+  </body>
+  <script>
+    function agregar() {
+      let productoV = producto.value;
+      let colorV = color.value;
+      let item = document.createElement("li");
+      item.innerText = productoV;
+      item.style.color = colorV;
+      lista.appendChild(item);
+      producto.value = "";
+      color.value = "#000000";
+    }
+  </script>
+</html>
