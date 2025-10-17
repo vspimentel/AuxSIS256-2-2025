@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .calculadora {
+        margin: 20px auto;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid black;
+        gap: 10px;
+
+        & .pantalla {
+          width: 100%;
+          border: 1px solid black;
+          display: flex;
+          flex-direction: column;
+
+          & .auxiliar {
+            width: 100%;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px;
+            min-height: 30px;
+          }
+
+          & .principal {
+            width: 100%;
+            font-size: 18px;
+            text-align: right;
+            padding: 5px;
+            min-height: 40px;
+          }
+        }
+
+        .teclado {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+
+          & .tecla {
+            width: 100%;
+            padding: 15px 10px;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculadora">
+      <div class="pantalla">
+        <div class="auxiliar"></div>
+        <div class="principal"></div>
+      </div>
+      <div class="teclado">
+        <div class="tecla numero">1</div>
+        <div class="tecla numero">2</div>
+        <div class="tecla numero">3</div>
+        <div class="tecla operacion">+</div>
+        <div class="tecla numero">4</div>
+        <div class="tecla numero">5</div>
+        <div class="tecla numero">6</div>
+        <div class="tecla operacion">-</div>
+        <div class="tecla numero">7</div>
+        <div class="tecla numero">8</div>
+        <div class="tecla numero">9</div>
+        <div class="tecla operacion">*</div>
+        <div class="tecla numero">0</div>
+        <div class="tecla borrar">DEL</div>
+        <div class="tecla igual">=</div>
+        <div class="tecla operacion">/</div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

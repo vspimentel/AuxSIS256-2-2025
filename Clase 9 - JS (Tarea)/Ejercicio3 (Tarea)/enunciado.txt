@@ -1,0 +1,9 @@
+Agregar a la calculadora 4 botones:
+
+-Potencia ^
+-Raíz de cualquier numero √
+-Factorial ! (Caso especial)
+-Logaritmo base 10, (Caso especial)
+
+Subir a la carpeta de tareas como Tarea Aux 1
+Para el 24 de Octubre
