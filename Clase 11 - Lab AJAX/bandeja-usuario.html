@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="buttons">
+    <div class="button" style="border: 1px solid blue">Bandeja Entrada</div>
+    <div class="button" style="border: 1px solid orange">Bandeja Salida</div>
+    <div class="button" style="border: 1px solid green">Borradores</div>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div
+        class="button"
+        style="
+          border: 1px solid blue;
+          background-color: rgb(120, 120, 237);
+          color: white;
+        "
+      >
+        Redactar
+      </div>
+      <div
+        class="button"
+        style="
+          border: 1px solid blue;
+          background-color: rgb(120, 120, 237);
+          color: white;
+        "
+        onclick="salir()"
+      >
+        Salir
+      </div>
+    </div>
+    <div class="tabla">
+      <table border="1" id="tabla">
+        <thead>
+          <tr>
+            <th>Correo</th>
+            <th>Asunto</th>
+            <th>Estado</th>
+            <th>Operación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>maria.gonzalez@gmail.com</td>
+            <td>Bienvenido</td>
+            <td>Pendiente</td>
+            <td>
+              <div class="row" style="justify-content: center">
+                <div
+                  class="button"
+                  style="
+                    border: 1px solid blue;
+                    background-color: rgb(120, 120, 237);
+                    color: white;
+                    width: 100px;
+                  "
+                >
+                  Ver
+                </div>
+                <div
+                  class="button"
+                  style="
+                    border: 1px solid blue;
+                    background-color: rgb(120, 120, 237);
+                    color: white;
+                    width: 100px;
+                  "
+                >
+                  Borrar
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

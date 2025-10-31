@@ -1,0 +1,58 @@
+<div class="overlay" id="overlay"></div>
+<div class="container">
+  <div class="buttons">
+    <div
+      class="button"
+      style="border: 1px solid blue"
+      onclick="cargarUsuarios()"
+    >
+      Usuarios
+    </div>
+    <div
+      class="button"
+      style="border: 1px solid orange"
+      onclick="cargarBandejaSalida()"
+    >
+      Bandeja Salida
+    </div>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div
+        class="button"
+        style="
+          border: 1px solid blue;
+          background-color: rgb(120, 120, 237);
+          color: white;
+        "
+        onclick="mostrarFormularioAviso()"
+      >
+        Redactar a todos
+      </div>
+      <div
+        class="button"
+        style="
+          border: 1px solid blue;
+          background-color: rgb(120, 120, 237);
+          color: white;
+        "
+        onclick="salir()"
+      >
+        Salir
+      </div>
+    </div>
+    <div class="tabla">
+      <table border="1" id="tabla">
+        <thead>
+          <tr>
+            <th>Correo</th>
+            <th>Nombre</th>
+            <th>Nivel</th>
+            <th>Operación</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
