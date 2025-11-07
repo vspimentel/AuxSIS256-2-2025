@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div
+      class="w-[900px] flex border border-black min-h-[500px] m-auto mt-5 flex-col"
+    >
+      <div
+        class="w-full h-fit px-3 py-2 border-b border-black flex justify-start gap-3 bg-blue-300"
+      >
+        <div class="text-lg font-semibold cursor-pointer hover:underline">
+          Pacientes
+        </div>
+        <div class="text-lg font-semibold cursor-pointer hover:underline">
+          Doctores
+        </div>
+        <div class="text-lg font-semibold cursor-pointer hover:underline">
+          Citas
+        </div>
+      </div>
+      <div class="flex flex-col p-3">
+        <div class="flex w-full justify-between items-center mb-3">
+          <div class="text-lg font-semibold mb-2">Lista de doctores</div>
+
+          <a
+            href="pdf-medicos.php"
+            download
+            class="px-2 py-1 bg-blue-500 text-white border border-blue-700 text-center cursor-pointer hover:bg-blue-400"
+          >
+            Descargar PDF
+          </a>
+        </div>
+        <table border="1" id="tabla-medicos">
+          <thead>
+            <tr class="bg-blue-200 rounded-t-xl border-b border-black">
+              <th class="p-1">Nombre</th>
+              <th class="p-1">Especialidad</th>
+              <th class="p-1">Teléfono</th>
+              <th class="p-1">Correo</th>
+              <th class="p-1 w-1/5">Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

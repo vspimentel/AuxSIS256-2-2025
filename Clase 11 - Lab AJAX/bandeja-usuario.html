@@ -1,8 +1,27 @@
+<div class="overlay" id="overlay"></div>
 <div class="container">
   <div class="buttons">
-    <div class="button" style="border: 1px solid blue">Bandeja Entrada</div>
-    <div class="button" style="border: 1px solid orange">Bandeja Salida</div>
-    <div class="button" style="border: 1px solid green">Borradores</div>
+    <div
+      class="button"
+      style="border: 1px solid blue"
+      onclick="cargarBandejaEntrada()"
+    >
+      Bandeja Entrada
+    </div>
+    <div
+      class="button"
+      style="border: 1px solid orange"
+      onclick="cargarBandejaSalida()"
+    >
+      Bandeja Salida
+    </div>
+    <div
+      class="button"
+      style="border: 1px solid green"
+      onclick="cargarBorradores()"
+    >
+      Borradores
+    </div>
   </div>
   <div class="content">
     <div class="row">
@@ -13,6 +32,7 @@
           background-color: rgb(120, 120, 237);
           color: white;
         "
+        onclick="mostrarFormularioCorreo()"
       >
         Redactar
       </div>
@@ -38,39 +58,7 @@
             <th>Operación</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>maria.gonzalez@gmail.com</td>
-            <td>Bienvenido</td>
-            <td>Pendiente</td>
-            <td>
-              <div class="row" style="justify-content: center">
-                <div
-                  class="button"
-                  style="
-                    border: 1px solid blue;
-                    background-color: rgb(120, 120, 237);
-                    color: white;
-                    width: 100px;
-                  "
-                >
-                  Ver
-                </div>
-                <div
-                  class="button"
-                  style="
-                    border: 1px solid blue;
-                    background-color: rgb(120, 120, 237);
-                    color: white;
-                    width: 100px;
-                  "
-                >
-                  Borrar
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
   </div>

@@ -1,0 +1,17 @@
+{
+    "name": "hiro/clase12-labajax",
+    "autoload": {
+        "psr-4": {
+            "Hiro\\Clase12Labajax\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vspimentel",
+            "email": "wyou55097@gmail.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.2"
+    }
+}
