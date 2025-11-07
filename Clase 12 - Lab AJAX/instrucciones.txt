@@ -1,0 +1,57 @@
+REQUISITOS
+
+- Instalar Node JS
+- Instalar Composer
+
+INSTALAR TAILWIND CSS
+
+- En la consola de comandos (Click derecho en la carpeta del proyecto y "Abrir Terminal Integrada") ejecutar los comandos: 
+
+npm init -y (Darle enter a todo)
+npm install tailwindcss@3
+npx tailwind init
+
+- Crear una carpeta src y public
+- En cada una poner un archivo styles.css
+- En el style.css de la carpeta src agregar lo siguiente:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+- En la sección scripts de package.json agregar la línea: 
+
+"build-css": "tailwindcss -i ./src/styles.css -o ./public/styles.css --watch"
+
+- Reemplazar línea content de tailwind.config.js por: 
+
+content: ["./public/**/*.{html,php,js}"],
+
+- En la consola ejecutar lo siguiente:
+
+npm run build-css
+
+- Vincular el styles.css de la carpeta public al html donde se lo quiera usar
+
+INSTALAR MPDF
+
+- En la consola de comandos (Click derecho en la carpeta del proyecto y "Abrir Terminal Integrada") ejecutar los comandos: 
+
+composer init
+composer require mpdf/mpdf
+
+- En el archivo en donde se quiera crear el PDF, poner las líneas 
+
+require_once __DIR__ . '/../vendor/autoload.php';
+use Mpdf\Mpdf;
+Header('Content-Type: application/pdf');
+
+EJECUTAR ESTE PROYECTO 
+
+- En la consola de comandos (Click derecho en la carpeta del proyecto y "Abrir Terminal Integrada") ejecutar los comandos: 
+
+composer install
+npm install
+npm run build-css
+
+- Abrir page.html desde XAMPP
